@@ -7,16 +7,9 @@
         <title>Enable Solutions - Index</title>
     </head>
     <body id="index_body">
-        <header>
-            <h1>Enable Solutions</h1>
-            <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
-        </nav>
-        </header>
+        <?php 
+            include 'header.php';
+        ?>
         <section class="hero-section">
             <img class="img" src="styles/images/banner.jpeg" alt="Hero" />
             <h2 class="hero-msg">Join the Frontlines of Innovation</h1>
@@ -63,29 +56,12 @@
         <section class="video-section">
 
                 <h2 id="vid-text">View our teams video here!</h2>
-          
 
                 <a id="youtube_link" href="https://youtu.be/2KJobdmYtho" target="_blank">Link to our video</a>
             
         </section>
-        <footer>
-            <div id="Contact">
-                <p>Contact us at:</p>
-                <a href="enablesolutions@official.com.au">enablesolutions@official.com.au</p>
-            </div>
-            <div id="ftr-nav">
-                <nav id="ftr-nav">
-                <a href="index.php">Home></a>
-                <a href="about.php">About></a>
-                <a href="jobs.php">Jobs</a>
-                <a href="apply.php">Apply</a>
-                <a href="enhancements.php">Enhancements</a>
-            </nav>
-            </div>
-            <div id="Author">
-                <p>Author: &#169; Enable Solutions</p>
-                <p>Last Editted: September 2024</p>
-            </div>
-        </footer>
+        <?php 
+            include 'footer.php';
+        ?>
     </body>
 </html>
