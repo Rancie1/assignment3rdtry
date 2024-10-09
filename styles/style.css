@@ -1,0 +1,465 @@
+/*
+filename: style.css, webweavers
+authors: Nathan Rancie, Riley Parry, Aniket Moharana, Sam Nguyen
+created: 20/08/2024
+last modified: 3/09/2024
+description: css file for our website
+*/
+
+*{margin:0%}
+
+
+
+
+/* CSS for apply page -Nathan Rancie */
+
+
+/* basic setting for main content -Nathan Rancie*/
+body {font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #050505; }
+
+
+
+/* apply pages background colour change -Nathan Rancie */
+#apply_body{background: linear-gradient(to bottom, black, rgb(96, 211, 249)) }
+
+
+
+
+/* apply pages main body of content, curves the 
+   top corners, nice colour and fitting to page -Nathan Rancie */
+#main {background-color: #f4f4f4; 
+      padding: 20px; 
+      margin: 0% 5%;
+      margin-top: 5%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;}
+
+
+
+/* apply pages fieldsets, adds spacing in between, shadow and curving 
+-Nathan Rancie */
+fieldset {background: #fff; 
+          border: 2px solid #ccc; 
+          margin-bottom: 10px; 
+          padding: 15px; 
+          border-radius: 1em; 
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)} 
+
+
+/* apply and reset buttons on apply page, spacing and 
+change of color when hovering -Nathan Rancie */
+#buttons {display:flex;
+          justify-content: center;
+}
+#buttons input{ margin: 1%;}
+
+#buttons input:hover{border-color: silver;
+                     background-color:#66e9fe;}
+
+
+
+
+/* adjusting layout of gender options on apply page -Nathan Rancie */
+#gender_field{ display:flex; 
+      justify-content: center;}
+
+.gender_options{margin:0% 10% 0% 5%;}
+
+
+
+
+/* legends for each fielset adjustments -Nathan Rancie */
+legend {background-color: white;
+        border-radius: 5px;}
+    
+     
+
+
+
+  /* CSS for index page */
+
+
+header {position:relative ;
+      display:block ;
+      max-width:100% ;
+      min-height: 50% ;
+      height: 7vh ;
+      margin: auto ;
+      padding:1% 1% ;
+      /* background:#292828; */
+      background: black ;
+      color:#d9d9d9 ;
+}
+
+header h1 {
+      line-height: 45px ;
+      font-style: normal ;
+      font-size:2.5em ;
+      margin: 0 ;
+      position: relative ;
+      display:inline ;
+      border-bottom: 2px solid #d9d9d9 ;
+      padding-right: 30% ;
+      
+      /* badding-top: */
+}
+nav {
+      line-height: 45px ;
+      padding-left: 0% ;
+      padding-right: 0% ;
+      padding-top: 0px ;
+      padding-bottom: 50px ;
+      margin-top: 0 ;
+      margin-bottom: 0 ;
+      list-style: none ;
+      /* float:right; */
+      display:inline ;
+      color:white ;
+
+}
+
+nav a {
+      color:#d9d9d9 ;
+      text-decoration: none ;
+      padding: 5px;
+      border-bottom: 2px solid #d9d9d9 ;
+      padding-right: 3% ;
+      /* padding-right: 50px; */
+      white-space: nowrap ;
+      text-align: center ;
+}
+
+nav a:hover {
+      font-style: underline ;
+      color: white ;
+      border-bottom: 2px solid white ;
+}
+
+#index_body{background: linear-gradient(to bottom, #050404, rgb(96, 211, 249))}
+
+.hero-section .img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.hero-section{
+      position: relative;
+      margin: 0%;
+}
+
+.hero-section .hero-msg{
+      position: absolute;
+      font-size: 170%;
+      top: 42%;
+      left: 72%;
+      transform: translate(-50%, -50%);
+      color: #d9d9d9;
+      padding-bottom: 150px;
+}
+
+.hero-section .hero-sub-msg{
+      position: absolute;
+      text-align: center;
+      top: 52%;
+      left: 72%;
+      transform: translate(-50%, -50%);
+      color: #d9d9d9;
+      padding-bottom: 150px;
+}
+
+.hero-section .hero-btn{
+      position: absolute;
+      top: 50%;
+      left: 72%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transition-duration: 0.4s;
+      color: white;
+      border: 1px solid white;
+      font-size: 16px;
+      padding: 16px 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      background-color: transparent;
+      background-repeat: no-repeat;
+}
+
+/* Not working as of yet */
+.button:hover {
+      background-color: white;
+      color: black;
+}
+.container_index {  display: grid;
+      gap: 10px 10px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.2fr 1.4fr 1.3fr;
+      gap: 0px 0px;
+      grid-auto-flow: row;
+      grid-template-areas:
+      "Our-Work Our-Work Our-Work Our-Work"
+      "Info Info Info Info"
+      "Value-1 Value-2 Value-3 Value-4";
+      }
+      
+      .Our-Work { grid-area: Our-Work; }
+      
+      .Info { grid-area: Info; }
+      
+      .Value-4 { grid-area: Value-4; }
+      
+      .Value-1 { grid-area: Value-1; }
+      
+      .Value-2 { grid-area: Value-2; }
+      
+      .Value-3 { grid-area: Value-3; }
+
+      .Our-Work{
+            margin-top: none;
+            background-color: #66e9fe;
+            font-style: bold;
+            padding: 20px;
+            font-size: larger;
+            text-align: center;
+            color: black;
+      }
+      .Info{
+            background-color: #d9d9d9;
+            padding: 1rem;
+            text-align: center;
+            color: black;
+            display:block;
+            padding-bottom: 5px;
+      }
+      .Value-1{
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            color: black;
+            outline: 1px solid black;
+      }
+      .Value-2{
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            color: black;
+            outline: 1px solid black;
+      }
+      .Value-3{
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            color: black;
+            outline: 1px solid black;
+      }
+      .Value-4{
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+            color: black;
+            outline: 1px solid black;
+      }
+
+      
+.video-section {
+      background: linear-gradient(to top, rgb(28, 28, 28), rgb(96, 211, 249));
+      position: relative;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 2rem;
+}
+
+.video-section .vid-text{
+      position: absolute;
+      color: white;
+      font-size: 20px;
+      padding-bottom: 150px;
+      bottom: 50%;
+}
+
+.video-section .video{
+      position:absolute;
+      width: 320px;
+      height: 240px;
+      background-color: white;
+}
+
+footer{
+      border-top: 4px double #66e9fe;
+      display: flex;
+      justify-content: space-between;
+      width: 97.8%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      /* display: inline; */
+      padding: 1rem;
+}
+
+
+#youtube_link {color:white;}
+/* spacing for each div in footer along with 
+colour change when hovering over contact email -Nathan Rance */
+
+#Contact {margin-top: 5%;}
+
+#Contact a {color:#d9d9d9;}
+
+#Contact a:hover {color:white;}
+
+#Author {margin-top: 5%;}
+
+#ftr-nav {margin:0 auto;}
+
+
+/*Css for about page */
+
+
+
+
+#about_body {
+    
+      background-color: #f4f4f4;
+      line-height: 2; /* more readable text by spacing */
+  }
+  
+  /* Header styles */
+  header {
+      color: #fff;
+      text-align: center;
+  }
+  
+  /* Main container styles */
+  .container_about {
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Definition list styles */
+  dl {
+      display: flex; /* allow item in def list to be layout in a row */
+      flex-wrap: wrap;
+      justify-content: space-between; /*pushing dt to left and dd to right by add space between them */
+      margin-bottom: 20px;
+  }
+  
+  dt {
+      font-weight: bold;
+      width: 30%;  
+  }
+  
+  dd {
+      width: 65%;  
+      margin: 0 0 10px 0;
+  }
+  
+  /* Table styles */
+  table {
+      width: 80%;  /* center table by adding width */
+      margin: 20px auto;
+      border-collapse: collapse; /* making border appear in a single line */
+      text-align: left;
+  }
+  
+  th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f4f4f4;  
+  }
+  
+  
+  /* image styles */
+  figure {
+      float: right;  /* Float figure to the right */
+      margin: 0 0 10px 20px;
+      text-align: center;
+  } 
+  
+  figure img{
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #333;  /*image border */
+  }
+  
+  /* Mailto link styling */
+  p a {
+      color: #333;
+      text-decoration: none;
+      border-bottom: 2px solid #333;  /*bottom border for mail link*/
+  }
+/* CSS for jobs page - Aniket Moharana */
+
+#bodyjobs { background : linear-gradient(to bottom, black, rgb(96, 211, 249));} /* Sets background colour for the body, from apply page, Nathan Rancie */
+
+#jobspagetitle {color: #d9d9d9;} /*Sets background colour to grey to contrast with body background */
+
+#mainjobs { padding: 30px;} /* Adds padding to the main content */
+
+.labeljobs { 
+    font-size: 1.3em; /* Sets font size for labels */
+    font-weight: bold;} /* Makes labels bold */
+
+
+#searchjobs { 
+    background: white; /* Sets background colour for the search division */
+    border-radius: 5px; /* Rounds the corners of the search division */
+    padding: 20px; /* Adds padding inside the search division */
+    text-align: center; /* Centres align the text in the search division */
+    margin: 30px} /* Adds a margin around the search division */
+
+#searchbar { 
+    width:90%; /* Sets width of the search bar */
+    padding: 10px; /* Adds padding inside the search bar */
+    font-size: 1em; /* Sets font size for the search bar */
+    margin: 25px;} /* Adds a margin around the search bar */
+
+.selection { 
+    padding: 10px; /* Adds padding to the selection dropdowns */
+    font-size: 0.9em; /* Sets font size for dropdown list */
+    margin: 5px; /* Adds a margin around selection dropdowns */
+    cursor: pointer;} /* Changes cursor to pointer when hovering over*/
+
+.buttonjobs { 
+    background-color: #232323; /* Sets background colour of buttons */
+    color: white; /* Sets text color of buttons */
+    padding: 5px 5px; /* Adds padding to buttons */
+    font-size: 1em; /* Sets font size of buttons */
+    border: none; /* Removes the border from buttons */
+    border-radius: 5px; /* Rounds the corners of buttons */
+    cursor: pointer;} /* Changes cursor to pointer when hovering */
+
+.buttonjobs:hover { background: #959595;} /* Changes background colour when hovering over*/
+
+
+.description { 
+    display: flex; /* Use flexbox to lay paragraphs next to heading*/
+    align-items: center;} /* Centres elements vertically */
+
+
+.description p { padding-left: 5px;} /* Adds padding to paragraphs within description, spacing from headings */
+
+.sectionjobs { 
+    background: white; /* Sets background colour for job sections */
+    margin-top: 35px; /* Adds top margin */
+    margin-bottom: 35px; /* Adds bottom margin */
+    margin: 25px; /* Adds a margin around the sections */
+    padding: 25px; /* Adds padding inside the sections */
+    border-radius: 5px;} /* Rounds the corners of the sections */
+
+.sectionjobs h2 h3 {margin-top: 15px; /* Adds top margin to headings in sections */
+    margin-bottom: 15px} /* Adds bottom margin to headings in sections */
+	
+ol {margin-top: 15px; /* Adds top margin to ordered list */
+    margin-bottom: 15px} /* Adds bottom margin to ordered list */
+  
+  
