@@ -146,7 +146,7 @@
     
 
         if (isset($otherSkill) && empty($otherSkillDesc)){
-            $errors[] = "Other Skills Description is required when selecting Other Skill.<br>";
+            $errors[] = "Description of skill is required when selecting Other Skill.<br>";
             
         }
 
