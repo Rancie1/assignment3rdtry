@@ -171,8 +171,10 @@
                                                     '$otherSkillDesc')";
                 
                 if (mysqli_query($dbconn, $query)) {
-                    $success = "Application submitted successfully"; 
+                    $eoiNumber = mysqli_insert_id($dbconn);
+                    $success = "Application submitted successfully. Your EOI number is $eoiNumber"; 
                     $_SESSION['success'] = $success;
+
                     header("Location: apply.php"); 
                     exit;
                 } else {
