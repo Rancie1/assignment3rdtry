@@ -158,6 +158,20 @@
 
         if(!empty($errors)){
             $_SESSION['errors'] = $errors;
+            $_SESSION['jobref'] = $jobReference;
+            $_SESSION['fname'] = $firstName;
+            $_SESSION['lname'] = $lastName;
+            $_SESSION['dob'] = $dob;
+            $_SESSION['Gender'] = $gender;
+            $_SESSION['street'] = $streetAddress;
+            $_SESSION['suburb'] = $suburb;
+            $_SESSION['state'] = $state;
+            $_SESSION['postcode'] = $postcode;
+            $_SESSION['email'] = $email;
+            $_SESSION['phone'] = $phone;
+            $_SESSION['skills'] = $skills;
+            $_SESSION['otherskills'] = $otherSkill;
+            $_SESSION['skilldescription'] = $otherSkillDesc;
             header("Location: apply.php");
             exit;
         } else {
