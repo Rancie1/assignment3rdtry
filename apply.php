@@ -319,6 +319,7 @@ description: apply page for our website-->
                             id="html"
                             name="skills[]"
                             value="HTML"
+                            <?php if (in_array('HTML', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -328,6 +329,7 @@ description: apply page for our website-->
                             id="css"
                             name="skills[]"
                             value="CSS"
+                            <?php if (in_array('CSS', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -337,6 +339,7 @@ description: apply page for our website-->
                             id="js"
                             name="skills[]"
                             value="Javascript"
+                            <?php if (in_array('Javascript', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -346,6 +349,7 @@ description: apply page for our website-->
                             id="php"
                             name="skills[]"
                             value="PHP"
+                            <?php if (in_array('PHP', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -355,6 +359,7 @@ description: apply page for our website-->
                             id="mysql"
                             name="skills[]"
                             value="MySQL"
+                            <?php if (in_array('MySQL', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -364,11 +369,12 @@ description: apply page for our website-->
                             id="otherskills"
                             name="otherskills"
                             value="Other"
+                            <?php if (!empty($otherSkill)) {echo 'checked';} ?>
                         />
                     </div>
                     <br />
                     <div>
-                        <label for="skill">Description of Skill:</label> <br />
+                        <label for="skill">Description of Skill:</label><br/>
                         <textarea id="skilldescription" name="skilldescription" rows="4" cols="40" 
                             placeholder="Please enter a decription of your skill here">
                         </textarea>
