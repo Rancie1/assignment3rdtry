@@ -158,12 +158,44 @@
 
         if(!empty($errors)){
             $_SESSION['errors'] = $errors;
+            $_SESSION['jobref'] = $jobReference;
+            $_SESSION['fname'] = $firstName;
+            $_SESSION['lname'] = $lastName;
+            $_SESSION['dob'] = $dob;
+            $_SESSION['Gender'] = $gender;
+            $_SESSION['street'] = $streetAddress;
+            $_SESSION['suburb'] = $suburb;
+            $_SESSION['state'] = $state;
+            $_SESSION['postcode'] = $postcode;
+            $_SESSION['email'] = $email;
+            $_SESSION['phone'] = $phone;
+            $_SESSION['skills'] = $skills;
+            $_SESSION['otherskills'] = $otherSkill;
+            $_SESSION['skilldescription'] = $otherSkillDesc;
             header("Location: apply.php");
             exit;
         } else {
             $skillsList = implode(", ", $skills);
             $dbconn = mysqli_connect($host, $user, $pwd, $sql_db);
             if ($dbconn) {
+                $createTableQuery = "CREATE TABLE IF NOT EXISTS eoi (
+                    EOInumber INT AUTO_INCREMENT PRIMARY KEY,
+                    JobReferenceNumber VARCHAR(5) NOT NULL,
+                    FirstName VARCHAR(20) NOT NULL,
+                    LastName VARCHAR(20) NOT NULL,
+                    StreetAddress VARCHAR(40) NOT NULL,
+                    SuburbTown VARCHAR(40) NOT NULL,
+                    State VARCHAR(10) NOT NULL,
+                    Postcode VARCHAR(4) NOT NULL,
+                    EmailAddress VARCHAR(255) NOT NULL,
+                    PhoneNumber VARCHAR(12) NOT NULL,
+                    Skills TEXT,
+                    OtherSkills TEXT,
+                    Status ENUM('New', 'Current', 'Final') DEFAULT 'New'
+                )";
+
+                if (mysqli_query($dbconn, $createTableQuery)) {
+                    
                 $query = "INSERT INTO eoi (EOInumber, JobReferenceNumber, FirstName, LastName, StreetAddress,
                                             SuburbTown, State, Postcode, EmailAddress, PhoneNumber, Skills, OtherSkills)
                                             VALUES (NULL, '$jobReference', '$firstName', '$lastName', '$streetAddress',
@@ -171,8 +203,10 @@
                                                     '$otherSkillDesc')";
                 
                 if (mysqli_query($dbconn, $query)) {
-                    $success = "Application submitted successfully"; 
+                    $eoiNumber = mysqli_insert_id($dbconn);
+                    $success = "Application submitted successfully. Your EOI number is $eoiNumber"; 
                     $_SESSION['success'] = $success;
+
                     header("Location: apply.php"); 
                     exit;
                 } else {
@@ -180,14 +214,19 @@
                     header('Location: apply.php');
                     exit;
                 }
+            } else {
+                $_SESSION['errors'] = ["Error creating table. Please try again."];
+                header('Location: apply.php');
+                exit;
+            }
 
-                mysqli_close($dbconn);
+                
 
             } else {
                 $_SESSION['errors'] = ["There is some problems in the connection. Please try later"];
                 header('Location: apply.php');
                 exit;
-            }
+            } mysqli_close($dbconn);
         }
     } 
     

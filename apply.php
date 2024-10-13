@@ -2,8 +2,39 @@
     session_start();
 
     $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+    $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
+    $jobReference = isset($_SESSION['jobref']) ? $_SESSION['jobref'] : '';
+    $firstName = isset($_SESSION['fname']) ? $_SESSION['fname'] : '';
+    $lastName = isset($_SESSION['lname']) ? $_SESSION['lname'] : '';
+    $dob = isset($_SESSION['dob']) ? $_SESSION['dob'] : '';
+    $gender = isset($_SESSION['Gender']) ? $_SESSION['Gender'] : '';
+    $streetAddress = isset($_SESSION['street']) ? $_SESSION['street'] : '';
+    $suburb = isset($_SESSION['suburb']) ? $_SESSION['suburb'] : '';
+    $state = isset($_SESSION['state']) ? $_SESSION['state'] : '';
+    $postcode = isset($_SESSION['postcode']) ? $_SESSION['postcode'] : '';
+    $email = isset($_SESSION['email']) ? $_SESSION['email'] : '';
+    $phone = isset($_SESSION['phone']) ? $_SESSION['phone'] : '';
+    $otherSkill = isset($_SESSION['otherskills']) ? $_SESSION['otherskills'] : '';
+    $skills = isset($_SESSION['skills']) ? $_SESSION['skills'] : [];
+    $otherSkillDesc = isset($_SESSION['otherskilldesc']) ? $_SESSION['otherskilldesc'] : '';
+
 
     unset($_SESSION['errors']);
+    unset($_SESSION['success']);
+    unset($_SESSION['jobref']); 
+    unset($_SESSION['fname']);
+    unset($_SESSION['lname']);
+    unset($_SESSION['dob']);
+    unset($_SESSION['Gender']);
+    unset($_SESSION['street']);
+    unset($_SESSION['suburb']);
+    unset($_SESSION['state']);
+    unset($_SESSION['postcode']);
+    unset($_SESSION['email']);
+    unset($_SESSION['phone']);
+    unset($_SESSION['skills']);
+    unset($_SESSION['otherskills']);
+    unset($_SESSION['otherskilldesc']);
 ?>
 
 <!DOCTYPE html>
@@ -67,11 +98,10 @@ description: apply page for our website-->
                     </div>
                 <?php endif; ?>
 
-                <?php if (isset($_SESSION['success'])): ?>
+                <?php if (!empty($success)): ?>
                     <div id="success-message">
-                        <p><?php echo $_SESSION['success']; ?></p>
+                        <p><?php echo $success; ?></p>
                     </div>
-                    <?php unset($_SESSION['success']); ?>
                 <?php endif; ?>
 
                 <!--fieldset for job reference number-->
@@ -87,6 +117,7 @@ description: apply page for our website-->
                             pattern="[A-Za-z0-9]{5}"
                             title="Please enter 5 numbers or letters"
                             required="required"
+                            value = "<?php echo $jobReference?>"
                         />
                     </div>
                 </fieldset>
@@ -105,6 +136,7 @@ description: apply page for our website-->
                             pattern="^[A-Za-z]+$"
                             title="please enter a valid name"
                             required="required"
+                            value = "<?php echo $firstName?>"
                         />&emsp;
 
                         <label for="lname">Last Name:</label>
@@ -117,6 +149,7 @@ description: apply page for our website-->
                             pattern="^[A-Za-z]+$"
                             title="please enter a valid name"
                             required="required"
+                            value = "<?php echo $lastName?>"
                         />
                     </div>
                     <br />
@@ -129,6 +162,7 @@ description: apply page for our website-->
                             title="Please enter a valid date"
                             size="10"
                             required="required"
+                            value = "<?php echo $dob?>"
                         />
                     </div>
                 </fieldset>
@@ -146,6 +180,7 @@ description: apply page for our website-->
                                 name="Gender"
                                 value="Male"
                                 required="required"
+                                <?php if ($gender == 'Male') {echo 'checked';} ?>
                             />
                         </div>
 
@@ -156,6 +191,7 @@ description: apply page for our website-->
                                 id="female"
                                 name="Gender"
                                 value="Female"
+                                <?php if ($gender == 'Female') {echo 'checked';} ?>
                             />
                         </div>
 
@@ -166,6 +202,7 @@ description: apply page for our website-->
                                 id="other"
                                 name="Gender"
                                 value="Other"
+                                <?php if ($gender == 'Other') {echo 'checked';} ?>
                             />
                         </div>
                     </div>
@@ -184,6 +221,7 @@ description: apply page for our website-->
                             size="40"
                             title="max length of 40 characters"
                             required="required"
+                            value = "<?php echo $streetAddress?>"
                         />
                     </div>
                     <br />
@@ -197,6 +235,7 @@ description: apply page for our website-->
                             title="max length of 40 characters"
                             size="40"
                             required="required"
+                            value = "<?php echo $suburb?>"
                         />
                     </div>
                     <br />
@@ -204,14 +243,14 @@ description: apply page for our website-->
                         <label for="state">State:</label>
                         <select name="state" id="state" required="required">
                             <option value="">Please Select</option>
-                            <option value="VIC">VIC</option>
-                            <option value="NSW">NSW</option>
-                            <option value="QLD">QLD</option>
-                            <option value="NT">NT</option>
-                            <option value="WA">WA</option>
-                            <option value="SA">SA</option>
-                            <option value="TAS">TAS</option>
-                            <option value="ACT">ACT</option>
+                            <option value="VIC" <?php if ($state == 'VIC') {echo 'selected';} ?>>VIC</option>
+                            <option value="NSW" <?php if ($state == 'NSW') {echo 'selected';} ?>>NSW</option>
+                            <option value="QLD" <?php if ($state == 'QLD') {echo 'selected';} ?>>QLD</option>
+                            <option value="NT" <?php if ($state == 'NT') {echo 'selected';} ?>>NT</option>
+                            <option value="WA" <?php if ($state == 'WA') {echo 'selected';} ?>>WA</option>
+                            <option value="SA" <?php if ($state == 'SA') {echo 'selected';} ?>>SA</option>
+                            <option value="TAS" <?php if ($state == 'TAS') {echo 'selected';} ?>>TAS</option>
+                            <option value="ACT <?php if ($state == 'ACT') {echo 'selected';} ?>">ACT</option>
                         </select>
                     </div>
                     <br />
@@ -226,6 +265,7 @@ description: apply page for our website-->
                             title="please enter a valid postcode"
                             pattern="^\d{4}$"
                             required="required"
+                            value = "<?php echo $postcode?>"
                         />
                     </div>
                 </fieldset>
@@ -243,6 +283,7 @@ description: apply page for our website-->
                             size="20"
                             title="please enter a valid email address"
                             required="required"
+                            value = "<?php echo $email?>"
                         />&emsp;
 
                         <label for="phone">Phone Number:</label>
@@ -255,6 +296,7 @@ description: apply page for our website-->
                             title="please enter a valid phone number"
                             size="15"
                             required="required"
+                            value = "<?php echo $phone?>"
                         />
                     </div>
                 </fieldset>
@@ -270,6 +312,7 @@ description: apply page for our website-->
                             id="html"
                             name="skills[]"
                             value="HTML"
+                            <?php if (in_array('HTML', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -279,6 +322,7 @@ description: apply page for our website-->
                             id="css"
                             name="skills[]"
                             value="CSS"
+                            <?php if (in_array('CSS', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -288,6 +332,7 @@ description: apply page for our website-->
                             id="js"
                             name="skills[]"
                             value="Javascript"
+                            <?php if (in_array('Javascript', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -297,6 +342,7 @@ description: apply page for our website-->
                             id="php"
                             name="skills[]"
                             value="PHP"
+                            <?php if (in_array('PHP', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -306,6 +352,7 @@ description: apply page for our website-->
                             id="mysql"
                             name="skills[]"
                             value="MySQL"
+                            <?php if (in_array('MySQL', $skills)) {echo 'checked';} ?>
                         />
                         &emsp;
 
@@ -315,11 +362,12 @@ description: apply page for our website-->
                             id="otherskills"
                             name="otherskills"
                             value="Other"
+                            <?php if (!empty($otherSkill)) {echo 'checked';} ?>
                         />
                     </div>
                     <br />
                     <div>
-                        <label for="skill">Description of Skill:</label> <br />
+                        <label for="skill">Description of Skill:</label><br/>
                         <textarea id="skilldescription" name="skilldescription" rows="4" cols="40" 
                             placeholder="Please enter a decription of your skill here">
                         </textarea>
