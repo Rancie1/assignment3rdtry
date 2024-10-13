@@ -75,16 +75,9 @@ description: apply page for our website-->
     <body id="apply_body">
 
         <!--header and nav-->
-        <header>
-            <h1>Enable Solutions</h1>
-            <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
-        </nav>
-        </header>
+        <?php 
+            include 'header.php';
+        ?>
 
         <!--main body of apply page-->
         <section id="main">
@@ -391,24 +384,8 @@ description: apply page for our website-->
         </section>
 
         <!--footer with nav and other info-->
-        <footer>
-            <div id="Contact">
-                <p>Contact us at:</p>
-                <p><a href="mailto:enablesolutions@official.com.au">enablesolutions@official.com.au</a></p>
-            </div>
-            <div id="ftr-nav">
-                <nav id="ftr-nav1">
-                <a href="index.php">Home></a>
-                <a href="about.php">About></a>
-                <a href="jobs.php">Jobs</a>
-                <a href="apply.php">Apply</a>
-                <a href="enhancements.php">Enhancements</a>
-            </nav>
-            </div>
-            <div id="Author">
-                <p>Author: &#169; Enable Solutions</p>
-                <p>Last Editted: September 2024</p>
-            </div>
-        </footer>
+        <?php 
+            include 'footer.php';
+        ?>
     </body>
 </html>
