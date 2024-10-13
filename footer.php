@@ -6,6 +6,7 @@
     <meta name="description" content="footer code.">
     <meta name="keywords" content="header, enable solutions, cybersecurity">
     <meta name="viewport" content="footer=device-width, initial-scale=1.0">
+    <link href="styles/style.css" rel="stylesheet" />
     <title>Footer</title>
 </head>
 <body>

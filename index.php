@@ -15,7 +15,7 @@
             <h2 class="hero-msg">Join the Frontlines of Innovation</h1>
             <p class="hero-sub-msg">Help protect the future with us. Apply today and be 
                 apart of the next generatino of cybersecurity heros.</p>
-            <a href="apply.html">
+            <a href="apply.php">
                 <button class="hero-btn">Apply</button>
             </a>
         </section>

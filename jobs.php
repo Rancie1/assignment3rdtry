@@ -18,19 +18,9 @@
 
 <!-- Header created by Nathan Rancie, index.html -->
 
-	<header>
-        <!-- Header heading of the page -->
-        <h1>Enable Solutions</h1>
-            <!-- Navigation bar --> 
-            <nav id="hdr-nav"> 
-                <!-- Links to different pages of the website -->
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
-            </nav>
-    </header>
+	<?php 
+		include 'header.php';
+	?>
 	
     <!-- Main content area for jobs page-->
 	<main id="mainjobs"> 
@@ -282,29 +272,9 @@
 	
 <!-- Footer created by Nathan Rancie, index.html -->
 	
-    <footer>
-        <div id="Contact">
-            <p>Contact us at:</p>
-                <a href="mailto:enablesolutions@official.com.au">enablesolutions@official.com.au</a> <!-- Email link for contact -->
-        </div>
-        <div id="ftr-div">
-		<!-- Footer navigation bar -->
-            <nav id="ftr-nav"> 
-                <!-- Links to different sections of the website -->
-                <a href="index.php">Home></a>
-                <a href="about.php">About></a>
-                <a href="jobs.php">Jobs</a>
-                <a href="apply.php">Apply</a>
-                <a href="enhancements.php">Enhancements</a>
-            </nav>
-        </div>
-        <div id="Author">
-		<!-- Author information -->
-            <p>Author: &#169; Enable Solutions</p>
-			<!-- Last edited date -->
-            <p>Last Edited: September 2024</p> 
-        </div>
-    </footer>
+	<?php 
+		include 'footer.php';
+	?>
 
 </body>
 </html>

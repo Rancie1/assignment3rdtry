@@ -10,16 +10,9 @@
 </head>
 
 <body id="about_body">
-    <header>
-        <h1>Enable Solutions</h1>
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
-        </nav>
-    </header>
+    <?php 
+        include 'header.php';
+    ?>
 
     <div class="container_about">
         <h2>About Our Project Group</h2>
@@ -89,25 +82,9 @@
         <h3>Description of Our Hometowns:</h3>
         <p>Our members hail from the vibrant city Melbourne</p>
     </div>
-    <footer>
-        <div id="Contact">
-            <p>Contact us at:</p>
-            <a href="enablesolutions@official.com.au">enablesolutions@official.com.au></a>
-        </div>
-        <div id="ftr-nav">
-            <nav id="ftr-nav">
-                <a href="index.php">Home></a>
-                <a href="about.php">About></a>
-                <a href="jobs.php">Jobs</a>
-                <a href="apply.php">Apply</a>
-                <a href="enhancements.php">Enhancements</a>
-            </nav>
-        </div>
-        <div id="Author">
-            <p>Author: &#169; Enable Solutions</p>
-            <p>Last Editted: September 2024</p>
-        </div>
-    </footer>
+    <?php 
+        include 'footer.php';
+    ?>
 </body>
 
 </html>
