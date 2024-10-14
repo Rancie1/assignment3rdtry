@@ -83,7 +83,7 @@ description: apply page for our website-->
         <section id="main">
             <form
                 method="post"
-                action="proccess_eoi.php"
+                action="process_eoi.php"
                 id="reg_form"
                 novalidate="novalidate"
                 

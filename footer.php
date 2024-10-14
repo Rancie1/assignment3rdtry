@@ -17,8 +17,8 @@
         </div>
         <div id="ftr-nav">
             <nav id="ftr-nav">
-            <a href="index.php">Home></a>
-            <a href="about.php">About></a>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
             <a href="jobs.php">Jobs</a>
             <a href="apply.php">Apply</a>
             <a href="enhancements.php">Enhancements</a>
@@ -26,7 +26,7 @@
         </div>
         <div id="Author">
             <p>Author: &#169; Enable Solutions</p>
-            <p>Last Editted: September 2024</p>
+            <p>Last Edited: September 2024</p>
         </div>
     </footer>
 </body>
