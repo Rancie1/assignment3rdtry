@@ -73,9 +73,8 @@ change of color when hovering -Nathan Rancie */
 
 /* legends for each fielset adjustments -Nathan Rancie */
 legend {background-color: white;
-        border-radius: 5px;}
-    
-     
+      border-radius: 5px;
+}
 
 
 
@@ -83,14 +82,16 @@ legend {background-color: white;
 
 
 header {position:relative ;
-      display:block ;
+      display:flex ;
+      justify-content: space-around ;
       max-width:100% ;
       min-height: 50% ;
       height: 7vh ;
       margin: auto ;
       padding:1% 1% ;
       /* background:#292828; */
-      background: black ;
+      background: black ; 
+      /* ^^^^^^^change back to black */
       color:#d9d9d9 ;
 }
 
@@ -102,11 +103,10 @@ header h1 {
       position: relative ;
       display:inline ;
       border-bottom: 2px solid #d9d9d9 ;
+      /* padding-left: 3%; */
       padding-right: 30% ;
-      
-      /* badding-top: */
 }
-nav {
+/* nav {
       line-height: 45px ;
       padding-left: 0% ;
       padding-right: 0% ;
@@ -115,7 +115,6 @@ nav {
       margin-top: 0 ;
       margin-bottom: 0 ;
       list-style: none ;
-      /* float:right; */
       display:inline ;
       color:white ;
 
@@ -127,7 +126,6 @@ nav a {
       padding: 5px;
       border-bottom: 2px solid #d9d9d9 ;
       padding-right: 3% ;
-      /* padding-right: 50px; */
       white-space: nowrap ;
       text-align: center ;
 }
@@ -136,8 +134,166 @@ nav a:hover {
       font-style: underline ;
       color: white ;
       border-bottom: 2px solid white ;
+} */
+
+
+/* Hide the checkbox */
+.box {
+      display: none;
 }
 
+  /* Hamburger menu styling */
+.hamburger {
+      display: flex;
+      flex-direction: column;
+      width: 40px;
+      height: 30px;
+      margin: 20px;
+      justify-content: space-between;
+      cursor: pointer;
+}
+
+.line {
+      background-color: #fff;
+      width: 100%;
+      height: 3px;
+      box-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+  /* Hide dropdown by default */
+.dropdown {
+      display: none;
+      position: relative;
+      top: 10px;
+      right: 0;
+      width: auto;
+      padding: 20px 0px 20px 20px;
+      background-color: #306678;
+      height: auto;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+}
+
+  /* Show dropdown when checkbox is checked */
+.box:checked + .dropdown {
+      display: block;
+}
+
+  /* Dropdown items styling */
+.dropdown li {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      text-transform: uppercase;
+      list-style: none;
+}
+
+.dropdown li:hover {
+      background-color: #66E9FE;
+}
+
+.dropdown a {
+      color: #000000;
+      text-align: left;
+}
+
+
+/* ====================== */
+
+/* .menu{
+      position: relative;
+      display: inline;
+      top: 0px;
+      left:0px;
+      z-index: 100000;
+      width: 10vw;
+}
+
+
+.line{
+      color:#fff;
+      width: 100%;
+      height: 3px;
+      box-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+
+
+.hamburger{
+      display: flex;
+      flex-direction: column;
+      width: 40px;
+      height: 30px;
+      margin: 20px;
+      justify-content: space-between;
+      cursor: pointer;
+}
+
+.line{
+      color:#fff;
+      width: 100%;
+      height: 3px;
+      box-shadow: 1px 2px 2px rgb(255, 255, 255);
+}
+
+.dropdown{
+      position: relative;
+      top: 10px;
+      right: 0;
+      width: auto;
+      padding: 20px 0px 20px 20px;
+      background-color: #306678;
+      height: auto;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+}
+
+.box{
+      display: none;
+}
+
+#menuToggle {
+      display: none;
+}
+
+#menuToggle:checked .box {
+      display: block;
+}
+
+.dropdown li{
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+      text-transform: uppercase;
+      opacity: 100;
+      transform: all 0.2s;
+      list-style: none;
+}
+
+.dropdown li:hover{
+      background-color: #66E9FE;
+      width: 100%;
+}
+
+.dropdown a{
+      color:#000000;
+      display: flex;
+      justify-content: left; 
+}*/
+
+/* ====================== */
+
+/* .dropdown li:hover{
+      background-color: #66E9FE;
+      width: 100%;
+}
+
+.dropdown a{
+      color:#000000;
+      display: flex;
+      justify-content: left;
+
+} */
 #index_body{background: linear-gradient(to bottom, #050404, rgb(96, 211, 249))}
 
 .hero-section .img{
