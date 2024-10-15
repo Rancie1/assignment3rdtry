@@ -12,54 +12,25 @@
 <body>
     <header>
         <h1>Enable Solutions</h1>
-        <!-- NEW HAMBURGER MENU (WORK IN PROGRESS) -->
-
-        <div class="menu">
-            <!-- Hidden checkbox to control dropdown -->
-            <input type="checkbox" id="toggle" class="box">
-            
-            <!-- Label for the checkbox, styled as the hamburger menu -->
-            <label for="toggle" class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+    <section class="p-menu">
+        <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle" type="checkbox" />
+            <label class="hamburger" for="toggle">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
             </label>
-            
-            <!-- Dropdown menu -->
-            <ul class="dropdown">
-                <li><a href="#">Menu Item 1</a></li>
-                <li><a href="#">Menu Item 2</a></li>
-                <li><a href="#">Menu Item 3</a></li>
-            </ul>
-        </div>
-
-        <!-- <nav class="menu">
-            <input type="checkbox" id="menuToggle">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            
-            <div class="box">
-                <ul class="dropdown open">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About</a></li>
-                    <li><a href="jobs.php">Jobs</a></li>
-                    <li><a href="apply.php">Apply</a></li>
-                    <li><a href="enhancements.php">Enhancements</a></li>
-                </ul>
-            </div>
-        </input>
-        </nav> -->
-<!--         
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
-        </nav> -->
+        
+            <nav class="menu">
+                <a class="linkh" href="index.php">Home</a>
+                <a class="linkh" href="about.php">About</a>
+                <a class="linkh" href="jobs.php">Jobs</a>
+                <a class="linkh" href="apply.php">Apply</a>
+                <a class="linkh" href="enhancements.php">Enhancements</a>
+                <a class="lin kbutton-nav" href="">Contact</a>
+            </nav>
+        </nav>
+    </section>
     </header>
 </body>
 </html>
