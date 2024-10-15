@@ -26,7 +26,7 @@
         </div>
         <div id="Author">
             <p>Author: &#169; Enable Solutions</p>
-            <p>Last Editted: September 2024</p>
+            <p>Last Edited: September 2024</p>
         </div>
     </footer>
 </body>

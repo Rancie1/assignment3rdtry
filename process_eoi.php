@@ -185,7 +185,7 @@
                     LastName VARCHAR(20) NOT NULL,
                     StreetAddress VARCHAR(40) NOT NULL,
                     SuburbTown VARCHAR(40) NOT NULL,
-                    State VARCHAR(10) NOT NULL,
+                    State enum('VIC','NSW','QLD','NT','WA','SA','TAS','ACT') NOT NULL,
                     Postcode VARCHAR(4) NOT NULL,
                     EmailAddress VARCHAR(255) NOT NULL,
                     PhoneNumber VARCHAR(12) NOT NULL,
