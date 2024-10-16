@@ -196,12 +196,12 @@
 
                 if (mysqli_query($dbconn, $createTableQuery)) {
                     
-                $query = "INSERT INTO eoi (EOInumber, JobReferenceNumber, FirstName, LastName, StreetAddress,
-                                            SuburbTown, State, Postcode, EmailAddress, PhoneNumber, Skills, OtherSkills)
-                                            VALUES (NULL, '$jobReference', '$firstName', '$lastName', '$streetAddress',
-                                                    '$suburb', '$state', '$postcode', '$email', '$phone', '$skillsList',
-                                                    '$otherSkillDesc')";
-                
+                    $query = "INSERT INTO eoi (EOInumber, JobReferenceNumber, FirstName, LastName, StreetAddress,
+                                                SuburbTown, State, Postcode, EmailAddress, PhoneNumber, Skills, OtherSkills)
+                                                VALUES (NULL, '$jobReference', '$firstName', '$lastName', '$streetAddress',
+                                                        '$suburb', '$state', '$postcode', '$email', '$phone', '$skillsList',
+                                                        '$otherSkillDesc')";
+                    
                 if (mysqli_query($dbconn, $query)) {
                     $eoiNumber = mysqli_insert_id($dbconn);
                     $success = "Application submitted successfully. Your EOI number is $eoiNumber"; 

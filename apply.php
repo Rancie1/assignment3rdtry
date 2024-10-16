@@ -1,3 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Apply page for assignment 1" />
+        <meta name="keywords" content="Apply,assignment" />
+        <meta name="author" content="Nathan Rancie" />
+        <link href="styles/style.css" rel="stylesheet" />
+        <title>Apply</title>
+        <style>
+            #error-messages {
+                background-color: #ffcccc;
+                color: red;
+                border: 1px solid red;
+                padding: 10px;
+                margin: 10px;
+            }
+
+            #success-message {
+                background-color: #ccffcc;
+                color: green;
+                border: 1px solid green;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+
+    <!--filename: apply.html, webweavers
+authors: Nathan Rancie
+created: 20/08/2024
+last modified: 3/09/2024
+description: apply page for our website-->
 <?php
     session_start();
 
@@ -37,39 +71,8 @@
     unset($_SESSION['otherskilldesc']);
 ?>
 
-<!DOCTYPE html>
-<!--filename: apply.html, webweavers
-authors: Nathan Rancie
-created: 20/08/2024
-last modified: 3/09/2024
-description: apply page for our website-->
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Apply page for assignment 1" />
-        <meta name="keywords" content="Apply,assignment" />
-        <meta name="author" content="Nathan Rancie" />
-        <link href="styles/style.css" rel="stylesheet" />
-        <title>Apply</title>
-        <style>
-            #error-messages {
-                background-color: #ffcccc;
-                color: red;
-                border: 1px solid red;
-                padding: 10px;
-                margin: 10px;
-            }
 
-            #success-message {
-                background-color: #ccffcc;
-                color: green;
-                border: 1px solid green;
-                padding: 10px;
-                margin: 10px;
-            }
-        </style>
-    </head>
+
 
     <!--Apply page body-->
     <body id="apply_body">
