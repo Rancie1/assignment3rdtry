@@ -19,7 +19,7 @@
 <!-- Header created by Nathan Rancie, index.html -->
 
 	<?php 
-		include 'header.php';
+		include 'header.inc';
 	?>
 	
     <!-- Main content area for jobs page-->
@@ -273,7 +273,7 @@
 <!-- Footer created by Nathan Rancie, index.html -->
 	
 	<?php 
-		include 'footer.php';
+		include 'footer.inc';
 	?>
 
 </body>

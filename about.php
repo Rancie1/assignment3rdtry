@@ -11,7 +11,7 @@
 
 <body id="about_body">
     <?php 
-        include 'header.php';
+        include 'header.inc';
     ?>
 
     <div class="container_about">
@@ -83,7 +83,7 @@
         <p>Our members hail from the vibrant city Melbourne</p>
     </div>
     <?php 
-        include 'footer.php';
+        include 'footer.inc';
     ?>
 </body>
 

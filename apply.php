@@ -76,7 +76,7 @@ description: apply page for our website-->
 
         <!--header and nav-->
         <?php 
-            include 'header.php';
+            include 'header.inc';
         ?>
 
         <!--main body of apply page-->
@@ -385,7 +385,7 @@ description: apply page for our website-->
 
         <!--footer with nav and other info-->
         <?php 
-            include 'footer.php';
+            include 'footer.inc';
         ?>
     </body>
 </html>
