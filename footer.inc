@@ -21,6 +21,7 @@
             <a class="linkf" href="about.php">About</a>
             <a class="linkf" href="jobs.php">Jobs</a>
             <a class="linkf" href="apply.php">Apply</a>
+            <a class="linkf" href="manage.php">Manage</a>
             <a class="linkf" href="enhancements.php">Enhancements</a>
             </nav>
         </div>
