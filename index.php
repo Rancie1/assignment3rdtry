@@ -60,8 +60,8 @@
                 <a id="youtube_link" href="https://youtu.be/2KJobdmYtho" target="_blank">Link to our video</a>
             
         </section>
-        <?php 
-            include 'footer.php';
-        ?>
     </body>
+    <?php 
+        include 'footer.php';
+    ?>
 </html>

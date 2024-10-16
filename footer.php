@@ -13,7 +13,7 @@
     <footer>
         <div id="Contact">
             <p>Contact us at:</p>
-            <a href="enablesolutions@official.com.au">enablesolutions@official.com.au</p>
+            <a href="mailto:enablesolutions@official.com.au">enablesolutions@official.com.au</a></p>
         </div>
         <div class="ftr-nav">
             <nav class="ftr-elements">
@@ -26,7 +26,7 @@
         </div>
         <div id="Author">
             <p>Author: &#169; Enable Solutions</p>
-            <p>Last Edited: September 2024</p>
+            <p>Last Edited: October 2024</p>
         </div>
     </footer>
 </body>

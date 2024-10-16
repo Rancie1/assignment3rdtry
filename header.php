@@ -27,7 +27,7 @@
                 <a class="linkh" href="jobs.php">Jobs</a>
                 <a class="linkh" href="apply.php">Apply</a>
                 <a class="linkh" href="enhancements.php">Enhancements</a>
-                <a class="lin kbutton-nav" href="">Contact</a>
+                <a class="lin kbutton-nav" href="mailto:enablesolutions@official.com.au">Contact</a>
             </nav>
         </nav>
     </section>
