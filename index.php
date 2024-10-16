@@ -7,7 +7,7 @@
         <title>Enable Solutions - Index</title>
     </head>
     <?php 
-        include 'header.php';
+        include 'header.inc';
     ?>
     <body id="index_body">
         <section class="hero-section">
@@ -62,6 +62,6 @@
         </section>
     </body>
     <?php 
-        include 'footer.php';
+        include 'footer.inc';
     ?>
 </html>

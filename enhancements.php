@@ -10,7 +10,7 @@
     <title>Enhancements</title>
 </head>
 <?php 
-        include 'header.php';
+        include 'header.inc';
 ?>
 <body id="enhancement_body">
     <section id="enhancement_main">
@@ -38,7 +38,7 @@
     </section>
 
     <?php 
-        include 'footer.php';
+        include 'footer.inc';
     ?>
 </body>
 </html>
