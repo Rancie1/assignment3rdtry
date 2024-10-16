@@ -9,6 +9,7 @@
         <link href="styles/style.css" rel="stylesheet" />
         <title>Apply</title>
         <style>
+            /* styling for error and success messages */
             #error-messages {
                 background-color: #ffcccc;
                 color: red;
@@ -30,11 +31,11 @@
     <!--filename: apply.html, webweavers
 authors: Nathan Rancie
 created: 20/08/2024
-last modified: 3/09/2024
+last modified: 16/10/2024
 description: apply page for our website-->
 <?php
     session_start();
-
+    //initialise variables to store form data
     $errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
     $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
     $jobReference = isset($_SESSION['jobref']) ? $_SESSION['jobref'] : '';
@@ -52,7 +53,7 @@ description: apply page for our website-->
     $skills = isset($_SESSION['skills']) ? $_SESSION['skills'] : [];
     $otherSkillDesc = isset($_SESSION['otherskilldesc']) ? $_SESSION['otherskilldesc'] : '';
 
-
+    //unset session variables
     unset($_SESSION['errors']);
     unset($_SESSION['success']);
     unset($_SESSION['jobref']); 
@@ -90,7 +91,7 @@ description: apply page for our website-->
                 id="reg_form"
                 novalidate="novalidate"
                 
-            >
+            >   <!--display errors if their is any-->
                 <?php if (!empty($errors)): ?>
                     <div id="error-messages">
                         <ul>
@@ -100,7 +101,7 @@ description: apply page for our website-->
                         </ul>
                     </div>
                 <?php endif; ?>
-
+                <!--display success message if form goes through-->
                 <?php if (!empty($success)): ?>
                     <div id="success-message">
                         <p><?php echo $success; ?></p>
