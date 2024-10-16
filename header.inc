@@ -29,6 +29,7 @@
                         <a class="linkh" href="about.php">About</a>
                         <a class="linkh" href="jobs.php">Jobs</a>
                         <a class="linkh" href="apply.php">Apply</a>
+                        <a class="linkh" href="manage.php">Manage</a>
                         <a class="linkh" href="enhancements.php"
                             >Enhancements</a
                         >
