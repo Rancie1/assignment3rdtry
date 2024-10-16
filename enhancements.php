@@ -9,12 +9,32 @@
     <link href="styles/style.css" rel="stylesheet" />
     <title>Enhancements</title>
 </head>
-<body>
-    <?php 
+<?php 
         include 'header.php';
-    ?>
-    <section>
-        <p>No enhancements</p>
+?>
+<body id="enhancement_body">
+    <section id="enhancement_main">
+        <section id="enhancement1">
+            <h2>Enhancement - 1</h2>
+            <p>Enhancements made to the website include:</p>
+            <ul>
+                <li>Added a hamburger menu for mobile devices</li>
+                <li>Added a footer with contact information and navigation links</li>
+                <li>Added a group timetable to the about page</li>
+                <li>Added a group photo to the about page</li>
+                <li>Added a table to the about page</li>
+            </ul>
+        </section>
+        <div id="enhancement2">
+            <h2>Enhancement - 2</h2>
+            <p>Enhancements made to the website include:</p>
+            <ul>
+                <li>Added a hamburger menu for mobile devices</li>
+                <li>Added a footer with contact information and navigation links</li>
+                <li>Added a group timetable to the about page</li>
+                <li>Added a group photo to the about page</li>
+                <li>Added a table to the about page</li>
+            </ul>
     </section>
 
     <?php 

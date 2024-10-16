@@ -73,25 +73,27 @@ change of color when hovering -Nathan Rancie */
 
 /* legends for each fielset adjustments -Nathan Rancie */
 legend {background-color: white;
-        border-radius: 5px;}
-    
-     
+      border-radius: 5px;
+}
 
 
 
-  /* CSS for index page */
+/*============ CSS for index page ============*/
 
 
 header {position:relative ;
-      display:block ;
+      display:flex ;
+      justify-content: space-around ;
       max-width:100% ;
       min-height: 50% ;
       height: 7vh ;
       margin: auto ;
       padding:1% 1% ;
       /* background:#292828; */
-      background: black ;
+      background: black ; 
+      /* ^^^^^^^change back to black */
       color:#d9d9d9 ;
+      z-index: 100;
 }
 
 header h1 {
@@ -102,10 +104,114 @@ header h1 {
       position: relative ;
       display:inline ;
       border-bottom: 2px solid #d9d9d9 ;
+      /* padding-left: 3%; */
       padding-right: 30% ;
-      
-      /* badding-top: */
 }
+/* HEADER NAV */
+a {
+      color: #fff;
+      text-decoration: none;
+}
+
+.p-menu{
+      height: 100%;
+      width: 12vw;
+}
+
+/* Hamburger */
+.hamburger {
+      height: 45px;
+      margin: 10px;
+      display: -ms-grid;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      z-index: 120;
+      cursor: pointer;
+}
+
+.hamburger div {
+      background-color: #ffff;
+      position: relative;
+      width: 40px;
+      height: 3px;
+      margin-top: 7px;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+}
+
+#toggle {
+      display: none;
+}
+
+#toggle:checked + .hamburger .top {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      margin-top: 10px;
+}
+
+#toggle:checked + .hamburger .meat {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      margin-top: -5px;
+}
+
+#toggle:checked + .hamburger .bottom {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+}
+
+#toggle:checked ~ .menu {
+      height: 450px;
+}
+
+
+/* Menu */
+.menu {
+      width: 100%;
+      background-color: #02173F;
+      margin: 0;
+      display: -ms-grid;
+      display: grid;
+      grid-template-rows: 1fr repeat(4, 0.5fr);
+      grid-row-gap: 25px;
+      padding: 0;
+      list-style: none;
+      font-style: normal;
+      clear: both;
+      width: auto;
+      text-align: center;
+      height: 0px;
+      overflow: hidden;
+      transition: height .4s ease;
+      z-index: 5;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+
+.menu a:first-child {
+      margin-top: 40px;
+}
+
+.menu a:last-child {
+      margin-bottom: 40px;
+}
+
+.linkh {
+      width: 100%;
+      margin: 0;
+      padding: 10px 0;
+      font: 500 20px 'DM Serif Text', serif;
+      
+}
+
+.linkh:hover {
+      background-color: #fff;
+      color: rgb(61, 61, 61);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+}
+/* FOOTER NAV BAR */
 nav {
       line-height: 45px ;
       padding-left: 0% ;
@@ -115,40 +221,42 @@ nav {
       margin-top: 0 ;
       margin-bottom: 0 ;
       list-style: none ;
-      /* float:right; */
       display:inline ;
       color:white ;
 
 }
 
-nav a {
+.ftr-elements a {
       color:#d9d9d9 ;
       text-decoration: none ;
       padding: 5px;
       border-bottom: 2px solid #d9d9d9 ;
       padding-right: 3% ;
-      /* padding-right: 50px; */
       white-space: nowrap ;
       text-align: center ;
 }
 
-nav a:hover {
+.linkf:hover {
       font-style: underline ;
       color: white ;
       border-bottom: 2px solid white ;
 }
 
-#index_body{background: linear-gradient(to bottom, #050404, rgb(96, 211, 249))}
+#index_body{
+      background: linear-gradient(to bottom, #050404, rgb(96, 211, 249))
+}
 
 .hero-section .img{
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: 1;
 }
 
 .hero-section{
       position: relative;
       margin: 0%;
+      z-index: 1;
 }
 
 .hero-section .hero-msg{
@@ -159,6 +267,7 @@ nav a:hover {
       transform: translate(-50%, -50%);
       color: #d9d9d9;
       padding-bottom: 150px;
+      z-index: 2;
 }
 
 .hero-section .hero-sub-msg{
@@ -169,6 +278,7 @@ nav a:hover {
       transform: translate(-50%, -50%);
       color: #d9d9d9;
       padding-bottom: 150px;
+      z-index: 2;
 }
 
 .hero-section .hero-btn{
@@ -189,6 +299,7 @@ nav a:hover {
       display: inline-block;
       background-color: transparent;
       background-repeat: no-repeat;
+      z-index: 2;
 }
 
 /* Not working as of yet */
@@ -317,6 +428,36 @@ colour change when hovering over contact email -Nathan Rance */
 #Author {margin-top: 5%;}
 
 #ftr-nav {margin:0 auto;}
+
+/* CSS For Enhancements */
+
+#enhancement_body {
+      background: linear-gradient(to bottom, black, rgb(96, 211, 249));
+      color: white;
+}
+
+#enhancement_main {
+      background-color: #f4f4f4; 
+      padding: 20px; 
+      margin: 0% 5%;
+      margin-top: 5%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+}
+#enhancement1 {
+      font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #050505; 
+      
+}
+#enhancement2 {
+      font-family: "DM Serif Text", serif;
+      font-weight: 400;
+      font-style: normal;
+      color: #050505; 
+}
+
 
 
 /*Css for about page */

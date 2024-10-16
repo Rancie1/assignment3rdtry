@@ -6,10 +6,10 @@
         <link href="styles/style.css" rel="stylesheet" />
         <title>Enable Solutions - Index</title>
     </head>
+    <?php 
+        include 'header.php';
+    ?>
     <body id="index_body">
-        <?php 
-            include 'header.php';
-        ?>
         <section class="hero-section">
             <img class="img" src="styles/images/banner.jpeg" alt="Hero" />
             <h2 class="hero-msg">Join the Frontlines of Innovation</h1>
@@ -60,8 +60,8 @@
                 <a id="youtube_link" href="https://youtu.be/2KJobdmYtho" target="_blank">Link to our video</a>
             
         </section>
-        <?php 
-            include 'footer.php';
-        ?>
     </body>
+    <?php 
+        include 'footer.php';
+    ?>
 </html>

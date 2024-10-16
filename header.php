@@ -12,29 +12,25 @@
 <body>
     <header>
         <h1>Enable Solutions</h1>
-        <!-- NEW HAMBURGER MENU (WORK IN PROGRESS) -->
-        <!-- <nav class="menu">
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-            <ul class="dropdown">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="jobs.php">Jobs</a></li>
-                <li><a href="apply.php">Apply</a></li>
-                <li><a href="enhancements.php">Enhancements</a></li>
-            </ul>
-        </nav> -->
+    <section class="p-menu">
+        <nav id="navbar" class="navigation" role="navigation">
+            <input id="toggle" type="checkbox" />
+            <label class="hamburger" for="toggle">
+                <div class="top"></div>
+                <div class="meat"></div>
+                <div class="bottom"></div>
+            </label>
         
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="jobs.php">Jobs</a>
-            <a href="apply.php">Apply</a>
-            <a href="enhancements.php">Enhancements</a>
+            <nav class="menu">
+                <a class="linkh" href="index.php">Home</a>
+                <a class="linkh" href="about.php">About</a>
+                <a class="linkh" href="jobs.php">Jobs</a>
+                <a class="linkh" href="apply.php">Apply</a>
+                <a class="linkh" href="enhancements.php">Enhancements</a>
+                <a class="lin kbutton-nav" href="mailto:enablesolutions@official.com.au">Contact</a>
+            </nav>
         </nav>
+    </section>
     </header>
 </body>
 </html>
