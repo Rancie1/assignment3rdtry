@@ -161,7 +161,7 @@ description: apply page for our website-->
                     </div>
                     <br />
                     <div>
-                        <label for="date">Date of Birth:</label>
+                        <label for="dob">Date of Birth:</label>
                         <input
                             type="date"
                             name="dob"
@@ -374,7 +374,7 @@ description: apply page for our website-->
                     </div>
                     <br />
                     <div>
-                        <label for="skill">Description of Skill:</label><br/>
+                        <label for="skilldescription">Description of Skill:</label><br/>
                         <textarea id="skilldescription" name="skilldescription" rows="4" cols="40" 
                             placeholder="Please enter a decription of your skill here">
                         </textarea>
