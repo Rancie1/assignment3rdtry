@@ -1,3 +1,10 @@
+
+<!--filename: apply.html, webweavers
+authors: Nathan Rancie
+created: 20/08/2024
+last modified: 16/10/2024
+description: apply page for our website-->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,11 +35,7 @@
         </style>
     </head>
 
-    <!--filename: apply.html, webweavers
-authors: Nathan Rancie
-created: 20/08/2024
-last modified: 16/10/2024
-description: apply page for our website-->
+    
 <?php
     session_start();
     //initialise variables to store form data
