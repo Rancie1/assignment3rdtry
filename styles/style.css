@@ -462,28 +462,34 @@ colour change when hovering over contact email -Nathan Rance */
 
 /*Css for about page */
 
+#about_body{
+      background: linear-gradient(to bottom, black, rgb(96, 211, 249));
+  }
+  
 
-
-
-#about_body {
-    
+  .container_about, #main {
       background-color: #f4f4f4;
-      line-height: 2; /* more readable text by spacing */
-  }
-  
-  /* Header styles */
-  header {
-      color: #fff;
-      text-align: center;
-  }
-  
-  /* Main container styles */
-  .container_about {
-      margin: auto;
-      background: #fff;
       padding: 20px;
-      border-radius: 8px;
+      margin: 0% 5%;
+      margin-top: 5%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+  
+
+  fieldset {
+      background: #fff;
+      border: 2px solid #ccc;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 1em;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  legend {
+      background-color: white;
+      border-radius: 5px;
   }
   
   /* Definition list styles */
@@ -506,16 +512,36 @@ colour change when hovering over contact email -Nathan Rance */
   
   /* Table styles */
   table {
-      width: 80%;  /* center table by adding width */
-      margin: 20px auto;
-      border-collapse: collapse; /* making border appear in a single line */
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+  }
+  
+  table th, table td {
+      border: 1px solid #BDC3C7;
+      padding: 10px;
       text-align: left;
   }
   
-  th, td {
-      padding: 10px;
-      border: 1px solid #ddd;
-      background-color: #f4f4f4;  
+  table th {
+      background-color: #ECF0F1;
+      font-weight: bold;
+  }
+
+  #about_project, #group_profile, #demographic_info, #hometown_description {
+      color: #2C3E50;
+      font-size: 1.1rem;
+      margin-top: 30px;
+      text-align: left;
+  }
+  
+ #group_description, #demographic_description, #hometown_info {
+      background-color: #FDFEFE;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
   }
   
   
@@ -538,6 +564,9 @@ colour change when hovering over contact email -Nathan Rance */
       text-decoration: none;
       border-bottom: 2px solid #333;  /*bottom border for mail link*/
   }
+
+
+
 /* CSS for jobs page - Aniket Moharana */
 
 #bodyjobs { background : linear-gradient(to bottom, black, rgb(96, 211, 249));} /* Sets background colour for the body, from apply page, Nathan Rancie */
@@ -602,5 +631,63 @@ colour change when hovering over contact email -Nathan Rance */
 	
 ol {margin-top: 15px; /* Adds top margin to ordered list */
     margin-bottom: 15px} /* Adds bottom margin to ordered list */
+  
+/*Manage Page CSS */
+  #manage_page form {
+      background-color: white;
+      border: 2px solid #0d3157;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #manage_page form label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+  }
+  
+  #manage_page form input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.1em;
+  }
+  
+  #manage_page form .button-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 20px;
+  }
+  
+  #manage_page form input[type="submit"] {
+      background-color: #09407a;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-bottom: 10px;
+      flex: 1;
+      margin-right: 10px;
+      text-align: center;
+  }
+  
+  #manage_page form input[type="submit"]:hover {
+      background-color: #0d3055;
+  }
+  
+  #manage_page form input[type="submit"]:last-child {
+      margin-right: 0;
+  }
+  
+  
   
   
