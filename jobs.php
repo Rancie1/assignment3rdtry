@@ -18,7 +18,7 @@
 
 <!-- Header created by Nathan Rancie, index.html -->
 
-	<?php include 'header.php'; ?>
+	<?php include 'header.inc'; ?>
 	
     <!-- Main content area for jobs page-->
 	<main id="mainjobs"> 
@@ -103,7 +103,7 @@
 			
 					echo '<div class="description">';
 					echo '<h3>Salary Range &#8674;</h3>';
-					echo '<p>' . htmlspecialchars($row['salary']) . '</p>';
+					echo '<p>' . htmlspecialchars($row['salary']) .' per year.</p>';
 					echo '</div>';
 			
 					echo '<div class="description">';
@@ -158,7 +158,7 @@
 	
 <!-- Footer created by Nathan Rancie, index.html -->
 	
-	<?php include 'footer.php'; ?>
+	<?php include 'footer.inc'; ?>
 
 </body>
 </html>
