@@ -1,18 +1,8 @@
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Riley Parry">
-    <meta name="description" content="footer code.">
-    <meta name="keywords" content="header, enable solutions, cybersecurity">
-    <meta name="viewport" content="footer=device-width, initial-scale=1.0">
-    <link href="styles/style.css" rel="stylesheet" />
-    <title>Footer</title>
-</head>
-<body>
     <footer>
         <div id="Contact">
             <p>Contact us at:</p>
-            <a href="mailto:enablesolutions@official.com.au">enablesolutions@official.com.au</a></p>
+            <a href="mailto:enablesolutions@official.com.au">enablesolutions@official.com.au</a>
         </div>
         <div class="ftr-nav">
             <nav class="ftr-elements">
@@ -29,5 +19,3 @@
             <p>Last Edited: October 2024</p>
         </div>
     </footer>
-</body>
-</html>
