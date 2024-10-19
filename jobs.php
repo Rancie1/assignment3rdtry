@@ -8,7 +8,7 @@
 <!-- Keywords for search engines -->
   <meta name="keywords" content="tech, jobs, positions" />
 <!-- Author of the page -->  
-  <meta name="author" content="Aniket Moharana" /> 
+  <meta name="author" content="Aniket Moharan, Nathan Rancie" /> 
 <!-- Title of the page displayed in the browser tab --> 
  <title>Job Descriptions Page</title> 
 <!-- Link to the external CSS stylesheet -->
@@ -16,7 +16,7 @@
 </head>
 <body id="bodyjobs">
 
-<!-- Header created by Nathan Rancie, index.html -->
+
 
 	<?php include 'header.inc'; ?>
 	
@@ -78,36 +78,43 @@
 		<?php
 
 		require_once "settings.php";
-
+		// Create a connection to the database
 		$dbconn = @mysqli_connect($host, $user, $pwd, $sql_db)
 		or die('Failed to connect to the server');
 
 		if($dbconn){
+			// Query to retrieve job details
 			$query = "SELECT reference_number, title, description, salary, supervisor, responsibilities, qualifications_essential, qualifications_preferable FROM jobs";
 
 			$result = mysqli_query($dbconn, $query);
-
+			// Check if the query was successful
 			if($result){
 				while($row = $result->fetch_assoc()) {
 					echo '<section class="sectionjobs">';
+					// Job title
 					echo '<h2>' . htmlspecialchars($row['title']) . '</h2>';
 					echo '<div class="description">';
 					echo '<h3>Position Description Reference Number &#8674;</h3>';
+					// Reference number
 					echo '<p>' . htmlspecialchars($row['reference_number']) . '</p>';
 					echo '</div>';
 			
 					echo '<div class="description">';
 					echo '<h3>Brief Description of the Position</h3>';
+					// Description
 					echo '<p>' . htmlspecialchars($row['description']) . '</p>';
 					echo '</div>';
 			
 					echo '<div class="description">';
 					echo '<h3>Salary Range &#8674;</h3>';
+					// Salary
 					echo '<p>' . htmlspecialchars($row['salary']) .' per year.</p>';
 					echo '</div>';
-			
+
+
 					echo '<div class="description">';
 					echo '<h3>Reports To &#8674;</h3>';
+					// Supervisor
 					echo '<p>' . htmlspecialchars($row['supervisor']) . '</p>';
 					echo '</div>';
 			
@@ -115,7 +122,9 @@
 					echo '<aside>';
 					echo '<h2>Key Responsibilities</h2>';
 					echo '<ol>';
+					//break responsibilities into array
 					$responsibilities = array_filter(explode('.', $row['responsibilities']));
+					//loop through array and display each responsibility
 					foreach ($responsibilities as $responsibility) {
 						echo '<li>' . htmlspecialchars($responsibility) . '</li>';
 					}
@@ -125,16 +134,24 @@
 					echo '<h2>Required Qualifications</h2>';
 					echo '<h3>Essential</h3>';
 					echo '<ul>';
+					//break essential qualifications into array
 					$qualifications_essential = array_filter(explode('.', $row['qualifications_essential']));
+
+					//loop through array and display each qualification
 					foreach ($qualifications_essential as $qualification) {
 						echo '<li>' . htmlspecialchars($qualification) . '</li>';
 					}
 					echo '</ul>';
+
+
 			
 					// Preferable qualifications
 					echo '<h3>Preferable</h3>';
 					echo '<ul>';
+					//break preferable qualifications into array
 					$qualifications_preferable = array_filter(explode('.', $row['qualifications_preferable']));
+					
+					//loop through array and display each qualification
 					foreach ($qualifications_preferable as $qualification) {
 						echo '<li>' . htmlspecialchars($qualification) . '</li>';
 					}
@@ -156,7 +173,7 @@
 
 	</main>
 	
-<!-- Footer created by Nathan Rancie, index.html -->
+
 	
 	<?php include 'footer.inc'; ?>
 
