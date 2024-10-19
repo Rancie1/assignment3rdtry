@@ -22,9 +22,9 @@
             <dt>Group Members & Contributions:</dt>
             <dd>
                 <ul>
-                    <li>Samuel Nguyen - About Page</li>
-                    <li>Riley Parry - Landing page/Index</li>
-                    <li>Nathan Rancie - Application page</li>
+                    <li>Samuel Nguyen - About Page,Manage Page</li>
+                    <li>Riley Parry - Landing page/Index,Enhancements,PHP to reuse common code </li>
+                    <li>Nathan Rancie - Application page,EOI table and process, Jobs Description</li>
                     <li>Aniket Moharana - Jobs page</li>
                 </ul>
             </dd>
