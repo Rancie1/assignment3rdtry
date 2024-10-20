@@ -42,7 +42,15 @@ include 'header.inc';
     <input type="text" id="status_update" name="status_update"><br>
 
     <label for="eoi_id">EOI ID for Status Update:</label>
-    <input type="text" id="eoi_id" name="eoi_id"><br><br>
+    <input type="text" id="eoi_id" name="eoi_id">
+
+    <label>Sort by:</label>
+    <select name="sort" id="sort">
+        <option value="JobReferenceNumber">Job Reference</option>
+        <option value="FirstName">First Name</option>
+        <option value="LastName">Last Name</option>
+        <option value="Status">Status</option>
+    </select><br><br>
 
     <input type="submit" name="action" value="List All EOIs">
     <input type="submit" name="action" value="Search by Job Reference">
@@ -50,12 +58,6 @@ include 'header.inc';
     <input type="submit" name="action" value="Delete EOIs by Job Reference">
     <input type="submit" name="action" value="Update EOI Status">
     <!-- Sorting option -->
-    <select name="sort" id="sort">
-        <option value="JobReferenceNumber">Job Reference</option>
-        <option value="FirstName">First Name</option>
-        <option value="LastName">Last Name</option>
-        <option value="Status">Status</option>
-    </select>
     <input type="submit" name="action" value="Sort">
 </form>
 </body>

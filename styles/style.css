@@ -661,6 +661,15 @@ ol {margin-top: 15px; /* Adds top margin to ordered list */
       border-radius: 5px;
       font-size: 1.1em;
   }
+
+#manage_page form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
   
   #manage_page form .button-container {
       display: flex;
