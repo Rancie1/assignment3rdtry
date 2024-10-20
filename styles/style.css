@@ -6,7 +6,10 @@ last modified: 3/09/2024
 description: css file for our website
 */
 
-*{margin:0%}
+*{
+      margin:0%;
+      font-family: 'Times New Roman', serif;
+}
 
 
 
@@ -169,7 +172,7 @@ a {
 /* Menu */
 .menu {
       width: 100%;
-      background-color: #02173F;
+      background-color: #0f2540;
       margin: 0;
       display: -ms-grid;
       display: grid;

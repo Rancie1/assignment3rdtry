@@ -13,6 +13,7 @@ $first_name = $_POST['first_name'] ?? '';
 $last_name = $_POST['last_name'] ?? '';
 $status_update = $_POST['status_update'] ?? '';
 $eoi_id = $_POST['eoi_id'] ?? '';
+$sort = $_POST['sort'] ?? '';
 
 ?>
 
@@ -50,6 +51,14 @@ $eoi_id = $_POST['eoi_id'] ?? '';
     <input type="submit" name="action" value="Search by Applicant Name">
     <input type="submit" name="action" value="Delete EOIs by Job Reference">
     <input type="submit" name="action" value="Update EOI Status">
+    <!-- Sorting option -->
+    <select name="sort" id="sort">
+        <option value="JobReferenceNumber">Job Reference</option>
+        <option value="FirstName">First Name</option>
+        <option value="LastName">Last Name</option>
+        <option value="Status">Status</option>
+    </select>
+    <input type="submit" name="action" value="Sort">
 </form>
 
 <?php
@@ -99,6 +108,14 @@ function displayResults($result) {
     } else {
         echo "<p>No EOIs found.</p>";
     }
+}
+
+// Takes value from drop down. 'ORDER BY' specified column (lowest-highest, alpha-numerical).
+if ($action === "Sort") {
+    $sort = $_POST['sort'];
+    $query = "SELECT * FROM eoi ORDER BY $sort";
+    $result = $conn->query($query);
+    displayResults($result);
 }
 
 
