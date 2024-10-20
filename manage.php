@@ -12,8 +12,7 @@ $first_name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
 $last_name = isset($_POST['last_name']) ? $_POST['last_name'] : '';
 $status_update = isset($_POST['status_update']) ? $_POST['status_update'] : '';
 $eoi_id = isset($_POST['eoi_id']) ? $_POST['eoi_id'] : '';
-
-
+$sort = $_POST['sort'] ?? '';
 ?>
 
 <!DOCTYPE html>
@@ -43,13 +42,23 @@ include 'header.inc';
     <input type="text" id="status_update" name="status_update"><br>
 
     <label for="eoi_id">EOI ID for Status Update:</label>
-    <input type="text" id="eoi_id" name="eoi_id"><br><br>
+    <input type="text" id="eoi_id" name="eoi_id">
+
+    <label>Sort by:</label>
+    <select name="sort" id="sort">
+        <option value="JobReferenceNumber">Job Reference</option>
+        <option value="FirstName">First Name</option>
+        <option value="LastName">Last Name</option>
+        <option value="Status">Status</option>
+    </select><br><br>
 
     <input type="submit" name="action" value="List All EOIs">
     <input type="submit" name="action" value="Search by Job Reference">
     <input type="submit" name="action" value="Search by Applicant Name">
     <input type="submit" name="action" value="Delete EOIs by Job Reference">
     <input type="submit" name="action" value="Update EOI Status">
+    <!-- Sorting option -->
+    <input type="submit" name="action" value="Sort">
 </form>
 </body>
 
@@ -100,6 +109,14 @@ function displayResults($result) {
     } else {
         echo "<p>No EOIs found.</p>";
     }
+}
+
+// Takes value from drop down. 'ORDER BY' specified column (lowest-highest, alpha-numerical).
+if ($action === "Sort") {
+    $sort = $_POST['sort'];
+    $query = "SELECT * FROM eoi ORDER BY $sort";
+    $result = $conn->query($query);
+    displayResults($result);
 }
 
 
