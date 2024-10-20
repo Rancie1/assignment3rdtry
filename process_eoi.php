@@ -244,6 +244,10 @@
             //close connection 
             mysqli_close($dbconn);
         }
-    } 
+    } if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+        //if the request method is not POST
+        header('Location: apply.php');
+        exit;
+    }
     
 ?>
