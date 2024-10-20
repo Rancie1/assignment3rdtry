@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="author" content="Riley Parry" />
-        <meta name="description" content="header code." />
-        <meta
-            name="keywords"
-            content="header, enable solutions, cybersecurity"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="styles/style.css" rel="stylesheet" />
-        <title>Header</title>
-    </head>
-    <body>
+
         <header>
             <h1>Enable Solutions</h1>
             <section class="p-menu">
@@ -42,5 +28,4 @@
                 </nav>
             </section>
         </header>
-    </body>
-</html>
+

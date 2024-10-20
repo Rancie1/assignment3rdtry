@@ -6,29 +6,27 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Initialize variables for query parameters
-$action = $_POST['action'] ?? '';
-$job_reference = $_POST['job_reference'] ?? '';
-$first_name = $_POST['first_name'] ?? '';
-$last_name = $_POST['last_name'] ?? '';
-$status_update = $_POST['status_update'] ?? '';
-$eoi_id = $_POST['eoi_id'] ?? '';
+$action = isset($_POST['action']) ? $_POST['action'] : '';
+$job_reference = isset($_POST['job_reference']) ? $_POST['job_reference'] : '';
+$first_name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
+$last_name = isset($_POST['last_name']) ? $_POST['last_name'] : '';
+$status_update = isset($_POST['status_update']) ? $_POST['status_update'] : '';
+$eoi_id = isset($_POST['eoi_id']) ? $_POST['eoi_id'] : '';
 $sort = $_POST['sort'] ?? '';
-
 ?>
-
-<?php include 'header.inc' ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage EOIs</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body id="manage_page">
 
-<h1>Manage EOIs</h1>
+<?php 
+include 'header.inc';
+?>
 
 <form method="POST" action="manage.php">
     <label for="job_reference">Job Reference Number:</label>
@@ -60,6 +58,7 @@ $sort = $_POST['sort'] ?? '';
     </select>
     <input type="submit" name="action" value="Sort">
 </form>
+</body>
 
 <?php
 // List All EOIs
