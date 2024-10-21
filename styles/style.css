@@ -133,7 +133,7 @@ a {
       cursor: pointer;
 }
 
-.hamburger div {
+.hamburger span {
       background-color: #ffff;
       position: relative;
       width: 40px;
