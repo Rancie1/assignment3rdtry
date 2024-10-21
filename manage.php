@@ -12,7 +12,7 @@ $first_name = isset($_POST['first_name']) ? $_POST['first_name'] : '';
 $last_name = isset($_POST['last_name']) ? $_POST['last_name'] : '';
 $status_update = isset($_POST['status_update']) ? $_POST['status_update'] : '';
 $eoi_id = isset($_POST['eoi_id']) ? $_POST['eoi_id'] : '';
-$sort = $_POST['sort'] ?? '';
+$sort = isset($_POST['sort']) ? $_POST['sort'] : '';
 ?>
 
 <!DOCTYPE html>
