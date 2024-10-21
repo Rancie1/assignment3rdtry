@@ -376,10 +376,9 @@ description: apply page for our website-->
                     <div>
                         <label for="skilldescription">Description of Skill:</label><br/>
                         <textarea id="skilldescription" name="skilldescription" rows="4" cols="40" 
-                            placeholder="Please enter a decription of your skill here">
-                        </textarea>
-                        <!--placeholder doesnt seem to work cant find why-->
+                        placeholder="Please enter a description of your skill here"></textarea>
                     </div>
+
                 </fieldset>
 
                 <!--submit and reset buttons-->
