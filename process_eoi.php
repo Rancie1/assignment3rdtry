@@ -51,7 +51,7 @@
             $errors[] = "First name is required.<br>";
         } 
         else if (!preg_match("/^[a-zA-Z]{1,20}$/", $firstName)) {
-            $errors[] = "First name must be 1-20 characters long.<br>";
+            $errors[] = "First name must be 1-20 alphabetical characters long.<br>";
         }
 
 
@@ -61,7 +61,7 @@
             $errors[] = "Last name is required.<br>";
         } 
         else if (!preg_match("/^[a-zA-Z]{1,20}$/", $lastName)) {
-            $errors[] = "Last name must be 1-20 characters long.<br>";
+            $errors[] = "Last name must be 1-20 alphabetical characters long.<br>";
         }
 
 
